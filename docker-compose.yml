@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: ankane/pgvector:latest
+    container_name: enterprise-rag-db
+    environment:
+      POSTGRES_USER: raguser
+      POSTGRES_PASSWORD: ragpassword
+      POSTGRES_DB: ragdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: enterprise-rag-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: raguser
+      RABBITMQ_DEFAULT_PASS: ragpassword
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  pgdata:

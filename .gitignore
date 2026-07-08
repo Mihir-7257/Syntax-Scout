@@ -1,0 +1,11 @@
+﻿# IDE files
+.idea/
+*.iml
+
+# Java compiled files
+backend/target/
+*.class
+
+# Python virtual environment
+worker/venv/
+worker/__pycache__/

@@ -1,0 +1,8 @@
+pika
+tree-sitter
+tree-sitter-java
+tree-sitter-python
+tree-sitter-javascript
+psycopg2-binary
+sentence-transformers
+gitpython
